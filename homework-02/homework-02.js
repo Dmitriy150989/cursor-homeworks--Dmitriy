@@ -7,25 +7,11 @@
 
 // Перевірте, чи є передане значення N ЦІЛИМ числом. (Підказка: якщо при конвертації в ціле число ми отримали NaN – це число нам не підходить)
 
-
-let getFirstNumber
-do {
-	getFirstNumber = +prompt(`Enter First Number`);     
-} while (!Number.isInteger(getFirstNumber));
-
 // Отримайте у користувача число(M) до якого ми будемо складати (включно). Отримати число можна за допомогою prompt. Пам'ятайте, ЧИСЛО, не РЯДОК!
 
 // Перевірте, чи є передане значення M ЦІЛИМ числом. (Підказка: якщо при конвертації в ціе число ми отримали NaN – це число нам не підходит)
 
-let getSecondNumber
-do {
-	getSecondNumber = +prompt(`Enter Second Number`);
-} while (!Number.isInteger(getSecondNumber));
-
 // Отримайте у користувача булевий параметр(true/false), який підкаже нам чи потрібно пропускати парні числа. TRUE – потрібно, FALSE – не потрібно. Використовуйте функцію confirm
-
-const skipNum = confirm(`Do you wanna to skip paired numbers?`);
-
 // Напишіть цикл, який буде складати числа від раніше отриманих N и M
 
 // В циклі додайте перевірку – чи потрібно пропускати при складанні парні числа. (Використовуйте для цього if/else). Якщо парні числа потрібно пропускати не додавайте їх до суми.
@@ -36,16 +22,32 @@ const skipNum = confirm(`Do you wanna to skip paired numbers?`);
 // Приклад: користувач ввів такі значення для N=10, M=100, ПропускатиПарні=FALSE – сума чисел виведена на екрані буде === 5005
 // Приклад: користувач ввів такі значення для N=1, M=10, ПропускатиПарні=FALSE – сума чисел виведена на екрані буде === 55
 
-let addOfNumbers = 0
-for (let i = getFirstNumber; i <=getSecondNumber ; i++) {
-	if (skipNum ==true && i % 2 == 0) {
+let n;
+
+do {
+	n = +prompt(`Enter First Number`);     
+} while (!Number.isInteger(n));
+
+
+let m;
+
+do {
+	m = +prompt(`Enter Second Number`);
+} while(!Number.isInteger(m) || (m < n));
+
+
+const skipNum = confirm(`Do you wanna to skip paired numbers?`);
+
+
+let sum = 0;
+for (let i = n; i <= m; i++) {
+	if (skipNum && i % 2 === 0) {
 		continue
 	} else {
-		addOfNumbers += i;
+		sum += i;
 	}
 }
-console.log(`Sum two numbers: ${addOfNumbers}`)
-
+console.log(`Sum two numbers: ${sum}`)
 
 
 
