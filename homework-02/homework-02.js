@@ -61,9 +61,3 @@ console.log(`Sum two numbers: ${sum}`)
 
 
 
-
-
-
-
-
-
