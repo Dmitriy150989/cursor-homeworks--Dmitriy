@@ -110,10 +110,10 @@ const deleteDuplicateLetter = (string) => {
  };
 
  console.log(`№1: ${getMaxDigit(3426567474325)}`);
- console.log(`№2: ${degreeOf(2, 5)}`);
- console.log(` №3: ${formatName('olEG')}`);
- console.log(` №4: ${countSalaryWithoutTax(1000)}`);
- console.log(` №5: ${getRandomNumber(1, 10)}`);
+ console.log(`№2: ${getDegree(2, 5)}`);
+ console.log(` №3: ${getName('olEG')}`);
+ console.log(` №4: ${getSum(1000)}`);
+ console.log(` №5: ${getRandom(1, 10)}`);
  console.log(` №6: ${countLetter('а', 'Асталавіста')}`);
  console.log(` №7: ${convertCurrency('2500uah')}`);
  console.log(` №8: ${getRandomPassword(4)}`);
