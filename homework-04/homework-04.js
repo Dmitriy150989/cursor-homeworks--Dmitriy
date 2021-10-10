@@ -26,14 +26,40 @@ const marks = [4, 5, 5, 3, 4, 5];
 
 //1..
 
-const getPairs = (students) => {
-	const firstPair = [students[0], students[2]];
-	const secondPair = [students[1], students[3]];
-	const thirdPair = [students[4], students[5]];
-	const pairs = [firstPair, secondPair, thirdPair];
+// const getPairs = (students) => {
+// 	const firstPair = [students[0], students[2]];
+// 	const secondPair = [students[1], students[3]];
+// 	const thirdPair = [students[4], students[5]];
+// 	const pairs = [firstPair, secondPair, thirdPair];
 
-	return pairs;
-}
+// 	return pairs;
+// }
+
+// 1.2
+
+
+const getPairs = (students) => {
+	const mans = [];
+	const women = [];
+
+	for (let student of students) {
+		 if (char.endsWith("а")) {
+			  women.push(student);
+		 } else {
+			  mans.push(student);
+		 };
+	};
+
+	const pairs = [];
+	for (let i = 0; i < mans.length; i++) {
+		 pairs.push(([mans[i]]).concat(women[i]));
+	};
+
+	return pairs	
+};
+console.log(getPairs(students));
+
+
 
 //2.. 
 
