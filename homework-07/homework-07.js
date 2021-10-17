@@ -128,9 +128,9 @@ const calculateWordLetters = (word) => {
 };
 
 
-console.log(`Функція №1: ${getSubjects(students[0])}`);
-console.log(`Функція №2: ${getAverageMarks(students[0])}`);
-console.log(`Функція №3: ${getStudentInfo(students[0])}`);
-console.log(`Функція №4: ${getStudentsNames(students)}`);
-console.log(`Функція №5: ${getBestStudent(students)}`);
-console.log(`Функція №6: ${calculateWordLetters("тест")}`);
+console.log(`Функция 1: ${getSubjects(students[0])}`);
+console.log(`Функция 2: ${getAverageMarks(students[0])}`);
+console.log(`Функция 3: ${getStudentInfo(students[0])}`);
+console.log(`Функция 4: ${getStudentsNames(students)}`);
+console.log(`Функция 5: ${getBestStudent(students)}`);
+console.log(`Функция 6: ${calculateWordLetters("тест")}`);
